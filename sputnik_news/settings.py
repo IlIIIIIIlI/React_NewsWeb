@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     "corsheaders",
-    "news"
+    "news",
+    "django_extensions",
+    "sslserver",
 ]
 
 MIDDLEWARE = [
@@ -133,6 +134,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS=[
     "http://localhost:3000",
+    "http://0.0.0.0:3000",
+    "https://reliable-lolly-eef0d3.netlify.app",
+    "https://deft-donut-b7ce6e.netlify.app",
+    "https://deft-donut-b7ce6e.netlify.app:3000",
+    "http://deft-donut-b7ce6e.netlify.app",
+    "http://deft-donut-b7ce6e.netlify.app:3000",
 ]
-
-django_heroku.settings(locals())
