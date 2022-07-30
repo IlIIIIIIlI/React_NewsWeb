@@ -12,7 +12,7 @@ export default function NewsDetail() {
     const paramsInUrl = useParams()
 
     function GetDetail() {
-        const url = `http://3.25.113.121:8000/api/news/${paramsInUrl.id}`
+        const url = `https://3.25.113.121:8000/api/news/${paramsInUrl.id}`
 
         axios.get(url).then((res) => {
             console.log(res)

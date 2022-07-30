@@ -17,7 +17,7 @@ export default function News() {
     // get news from our django rest framework
     // attention!! you need to write CORS allowed in the settings of django
     function getNews() {
-        const url = "http://3.25.113.121:8000/api/news"
+        const url = "https://3.25.113.121:8000/api/news"
         axios.get(url).then((res) => {
             console.log(res)
             setData(res.data)
